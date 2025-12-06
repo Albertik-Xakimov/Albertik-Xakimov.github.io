@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Галерея - Чарльз Бэббидж</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Чарльз Бэббидж</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Главная</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="character.html">О персонаже</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="images.html">Галерея</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="page-header">
+        <div class="container">
+            <h1 class="display-5">Галерея изображений</h1>
+            <p class="lead">Визуальная история жизни и изобретений Чарльза Бэббиджа в современной интерпретации</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12 mb-4">
+                <p>Эта галерея представляет коллекцию изображений, связанных с Чарльзом Бэббиджем и его революционными изобретениями. Каждое изображение символизирует важный аспект наследия "отца вычислительной техники" и демонстрирует, как его идеи продолжают вдохновлять современный мир технологий.</p>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-12">
+                <div id="galleryCarousel" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                        <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="Babbage1.jpg" class="d-block w-100 gallery-img" alt="Отец основатель - Чарльз Бэббидж">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Отец основатель - Чарльз Бэббидж</h5>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="lada.jpg" class="d-block w-100 gallery-img" alt="Совместная работа с Адой Лавлейс">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Совместная работа с Адой Лавлейс</h5>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="mashina1.jpg" class="d-block w-100 gallery-img" alt="Разностная машина">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Разностная машина</h5>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="university.jpg" class="d-block w-100 gallery-img" alt="Кембриджский университет">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Кембриджский университет</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#galleryCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Предыдущий</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#galleryCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Следующий</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- ДОБАВЛЕН ГЕНЕРАТОР СЛУЧАЙНЫХ ЧИСЕЛ -->
+        <div class="row mt-4">
+            <div class="col-md-6 offset-md-3">
+                <div class="card random-generator text-center">
+                    <div class="card-body">
+                        <h5 class="card-title">Тест вычислительной машины</h5>
+                        <p class="card-text">Генерация случайного числа от 1 до 1000:</p>
+                        <div class="random-number-container">
+                            <p id="random3">0</p>
+                            <button onclick="generateRandomNumber3()" class="btn btn-primary mt-2">Запустить расчёт</button>
+                        </div>
+                        <small class="text-muted d-block mt-2">Имитация работы вычислительной машины Бэббиджа</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row mt-4">
+            <div class="col-12">
+                <div class="gallery-stats">
+                    <h5>О галерее</h5>
+                    <p>Несмотря на то, что Чарлз Бэббидж считается изобретателем вычислительных машин, на самом деле он был очень разносторонним человеком. Бэббидж занимался безопасностью железнодорожного движения, для чего оборудовал вагон-лабораторию всевозможными датчиками, показания которых фиксировались самописцами. Изобрёл спидометр. Участвовал в изобретении тахометра. Создал приспособление, сбрасывающее случайные предметы с путей перед локомотивом.
+
+В ходе работ над созданием вычислительных машин сделал большой прогресс в металлообработке. Сконструировал поперечно-строгальный и токарно-револьверный станки, придумал методы изготовления зубчатых колес. Предложил новый метод заточки инструментов и литья под давлением.
+
+В 1834 году Бэббидж написал одну из самых важных работ «Экономика технологий и производств», в которой он предлагал то, что сейчас называется «исследованием операций».
+
+Он был одним из основателей Лондонского статистического общества. В числе его изобретений были спидометр, офтальмоскоп, сейсмограф, устройство для наведения артиллерийского орудия.
+
+Бэббидж оставил огромный след в истории XIX века и сделал переворот не только в математике и вычислительной технике, но и в науке в целом.</p>        
+                </div>
+            </div>
+        </div>
+        
+        <div class="row mt-4">
+            <div class="col-12 text-center">
+                <div class="btn-group" role="group">
+                    <a href="index.html" class="btn btn-secondary">На главную</a>
+                    <a href="character.html" class="btn btn-primary">О персонаже</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>Быстрые ссылки</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="amazon-link">Главная</a></li>
+                        <li><a href="character.html" class="amazon-link">О персонаже</a></li>
+                        <li><a href="images.html" class="amazon-link">Галерея</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <h5>Информация</h5>
+                    <p>Страница создана: 5.12.2025</p>
+                    <p>Сделано на основе Bing.com by МОАИСбд-21</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    
+    <script>
+        function generateRandomNumber3() {
+            const randomElement = document.getElementById('random3');
+            const randomNumber = Math.floor(Math.random() * 1000) + 1;
+            randomElement.textContent = randomNumber;
+            
+            randomElement.style.transform = 'scale(1.3)';
+            randomElement.style.color = '#0078D4';
+            randomElement.style.transition = 'all 0.3s';
+            
+            setTimeout(() => {
+                randomElement.style.transform = 'scale(1)';
+                randomElement.style.color = '';
+            }, 300);
+            
+            console.log(`На странице images.html сгенерировано число: ${randomNumber}`);
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            if (document.getElementById('random3')) {
+                generateRandomNumber3();
+            }
+        });
+    </script>
+</body>
+</html>
